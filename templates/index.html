@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Information</h1>
+        {% if data.error %}
+            <p class="error-message">{{ data.error }}</p>
+        {% else %}
+            <div class="weather-info">
+                <p><strong>City:</strong> {{ data.city_name }}</p>
+                <p><strong>Country:</strong> {{ data.country_code }}</p>
+                <p><strong>Coordinates:</strong> {{ data.coordinate }}</p>
+                <p><strong>Temperature:</strong> {{ data.temp }}</p>
+                <p><strong>Pressure:</strong> {{ data.pressure }}</p>
+                <p><strong>Humidity:</strong> {{ data.humidity }}</p>
+                <p><strong>Wind Speed:</strong> {{ data.wind_speed }}</p>
+                <p><strong>Wind Direction:</strong> {{ data.wind_direction }}</p>
+                <p><strong>Weather Description:</strong> {{ data.weather_description }}</p>
+                <p><strong>Sunrise:</strong> {{ data.sunrise }}</p>
+                <p><strong>Sunset:</strong> {{ data.sunset }}</p>
+            </div>
+        {% endif %}
+        <form method="post" action="/">
+            <input type="text" id="city" name="city" placeholder="Enter city:">
+            <button type="submit">Check Weather</button>
+            <button type="button" onclick="location.reload();">Refresh</button>
+        </form>
+    </div>
+</body>
+</html>
