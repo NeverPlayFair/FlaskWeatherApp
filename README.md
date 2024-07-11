@@ -46,10 +46,8 @@ python manage.py startapp downloader
 ## 3. How to run project?
 
  2. Run server:
- Important! Make sure u are in the path where is manage.py file!
-
 ````bash
-python app.py
+python weather.py
 ````
 
 ## Demo of app:
