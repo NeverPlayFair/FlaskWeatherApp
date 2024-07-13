@@ -52,6 +52,9 @@ python weather.py
 
 ## Demo of app:
 
+![image](https://github.com/user-attachments/assets/0d1161d7-05f9-4e5a-9f05-9e69a2e0f9ad)
+
+
 
 
 
